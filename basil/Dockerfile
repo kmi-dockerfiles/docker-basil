@@ -10,9 +10,6 @@ RUN apt-get -y update \
 
 EXPOSE 8080
 
-CMD ls \
-	&& echo "Waiting for Mysql startup..." \
-	&& sleep 7 \
-	&& /bin/bash mysql-check.sh \
+CMD /bin/bash mysql-check.sh \
 	&& java -jar -Dbasil.configurationFile=basil.ini -Dlog4j.configurationFile=log4j2.xml basil-server.jar -p 8080 
 
