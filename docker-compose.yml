@@ -1,14 +1,17 @@
 version: '2'
 services:
   pesto:
-    build: ./pesto
-    depends_on: 
+    build:
+      context: ./pesto
+      args:
+        BASIL_HOST: 192.168.99.100
+    links: 
       - basil
     ports:
       - "80:80"
   basil:
     build: ./basil
-    depends_on:
+    links:
       - db
     ports:
       - "8080:8080"
