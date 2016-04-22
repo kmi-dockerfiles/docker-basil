@@ -17,6 +17,8 @@ To startup Basil with Pesto UI, clone this GitHub project, then run the followin
 docker-compose up
 ```
 
+Basil will be available at `http://localhost:8080/basil`.
+Instead, Pesto will be accessible at `http://localhost/app`.
 
 ### Docker through Docker Machine (Windows and Mac OSX)
 
