@@ -4,7 +4,7 @@ services:
     build:
       context: ./pesto
       args:
-        BASIL_HOST: 192.168.99.100
+        BASIL_HOST: localhost
     links: 
       - basil
     ports:
